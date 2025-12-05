@@ -13,7 +13,9 @@ interface HexagonGridProps {
 
 export function HexagonGrid({ constituencies, onHexagonClick, selectedId }: HexagonGridProps) {
   // Arrange hexagons in a pattern resembling Dhaka's shape
-  const hexSize = 50
+  // Dynamic size based on screen width
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768
+  const hexSize = isMobile ? 30 : 50
   const hexWidth = hexSize * 2
   const hexHeight = Math.sqrt(3) * hexSize
 
@@ -50,7 +52,7 @@ export function HexagonGrid({ constituencies, onHexagonClick, selectedId }: Hexa
   const getHexPosition = (index: number) => {
     const pos = gridPositions[index]
     const xOffset = pos.row % 2 === 0 ? hexWidth * 0.75 : 0
-    const x = pos.col * hexWidth * 1.5 + xOffset
+    const x = pos.col * hexWidth * 1.5 + xOffset + 60
     const y = pos.row * hexHeight * 0.87
     return { x, y }
   }

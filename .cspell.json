@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "cmdk",
+    "vaul",
+    "radix",
+    "radix-ui",
+    "lucide",
+    "sonner",
+    "embla",
+    "recharts",
+    "nextjs",
+    "pnpm",
+    "tailwind",
+    "tailwindcss",
+    "clsx",
+    "zod",
+    "vaul",
+    "cmdk-react"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "pnpm-lock.yaml",
+    "package-lock.json"
+  ]
+}

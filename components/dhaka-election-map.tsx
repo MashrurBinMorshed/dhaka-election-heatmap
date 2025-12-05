@@ -73,9 +73,9 @@ export function DhakaElectionMap() {
   }
 
   return (
-    <div className="relative flex min-h-screen overflow-hidden bg-gray-50">
+    <div className="relative flex flex-col min-h-screen overflow-hidden bg-gray-50">
       {/* Left Menu Button */}
-      <div className="fixed left-12 top-32 z-50">
+      <div className="fixed left-3 top-20 z-50 md:left-12 md:top-32">
         <div className="relative">
           {/* <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -107,43 +107,45 @@ export function DhakaElectionMap() {
       </div>
 
       {/* Main Map Area */}
-      <div className="flex-1 flex flex-col">
-        <header className="border-b border-gray-200 bg-white p-4 lg:p-6">
-          <div className="flex items-center justify-between">
-            <div>
+      <div className="flex-1 flex flex-col h-full overflow-hidden">
+        <header className="border-b border-gray-200 bg-white p-2 md:p-4 lg:p-6 flex-shrink-0">
+          <div className="flex items-center justify-between gap-2">
+            <div className="min-w-0">
               <p className="text-xs font-medium uppercase tracking-wider text-orange-500">Dhaka Election Dashboard</p>
-              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">Dhaka Election Heat Map</h1>
+              <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900">Dhaka Election Heat Map 2026</h1>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
               <Legend />
             </div>
           </div>
         </header>
 
         {/* Map Container */}
-        <div className="flex-1 flex items-center justify-center p-4 lg:p-8">
-          <div className="relative">
+        <div className="flex-1 flex items-center justify-center p-2 md:p-4 lg:p-8 min-h-0 overflow-auto">
+          <div className="relative w-full h-full flex items-center justify-center">
             {/* Hexagon Grid */}
-            <HexagonGrid
-              constituencies={constituencies}
-              onHexagonClick={handleHexagonClick}
-              selectedId={selectedConstituency?.id}
-            />
+            <div className="w-full overflow-auto flex items-center justify-center">
+              <HexagonGrid
+                constituencies={constituencies}
+                onHexagonClick={handleHexagonClick}
+                selectedId={selectedConstituency?.id}
+              />
+            </div>
           </div>
         </div>
 
-        <footer className="border-t border-gray-200 bg-white p-4 lg:p-6">
-          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12">
+        <footer className="border-t border-gray-200 bg-white p-2 md:p-4 lg:p-6 flex-shrink-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 lg:gap-12">
             <div className="text-center">
-              <p className="text-2xl lg:text-3xl font-bold text-gray-900">20</p>
+              <p className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900">20</p>
               <p className="text-xs text-gray-500 uppercase tracking-wider">Total Seats</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl lg:text-3xl font-bold text-orange-500">Dhaka</p>
+              <p className="text-lg md:text-2xl lg:text-3xl font-bold text-orange-500">Dhaka</p>
               <p className="text-xs text-gray-500 uppercase tracking-wider">District</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl lg:text-3xl font-bold text-gray-900">2026</p>
+              <p className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900">2026</p>
               <p className="text-xs text-gray-500 uppercase tracking-wider">Election Year</p>
             </div>
           </div>
