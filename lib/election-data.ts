@@ -359,7 +359,7 @@ export const constituencies: Constituency[] = [
         party: "independent",
         votes: 74560,
         percentage: 46.5,
-        photo: "/hadi.jpg?height=60&width=60",
+        photo: "/public/hadi.jpg?height=60&width=60",
       },
       {
         id: 24,
