@@ -3,6 +3,7 @@
 "use client"
 
 import { useState } from "react"
+import { toast } from "sonner"
 import { HexagonGrid } from "./hexagon-grid"
 import { CandidatePanel } from "./candidate-panel"
 import { Legend } from "./legend"
@@ -20,23 +21,45 @@ export function DhakaElectionMap() {
   const [candidateName, setCandidateName] = useState("")
   const [partyName, setPartyName] = useState("")
   const [seatNumber, setSeatNumber] = useState<number | "">("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   const openModalFromMenu = () => {
     setIsMenuOpen(false)
     setIsModalOpen(true)
   }
 
-  const handleSubmitCandidate = (e: React.FormEvent) => {
+  const handleSubmitCandidate = async (e: React.FormEvent) => {
     e.preventDefault()
-    // For now, just log the submitted values and close the modal
-    // TODO: wire up to backend or Google Form if needed
-    // eslint-disable-next-line no-console
-    console.log({ candidateName, partyName, seatNumber })
-    setIsModalOpen(false)
-    setCandidateName("")
-    setPartyName("")
-    setSeatNumber("")
-    alert("Candidate info submitted (local demo).")
+    setIsSubmitting(true)
+    setSubmitError("")
+
+    try {
+      const response = await fetch("/api/submit-candidate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ candidateName, partyName, seatNumber }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || "Submission failed")
+      }
+
+      setIsModalOpen(false)
+      setCandidateName("")
+      setPartyName("")
+      setSeatNumber("")
+      toast.success("Candidate submitted successfully!", {
+        description: `${candidateName} from ${partyName} - Seat ${seatNumber}`,
+      })
+    } catch (err) {
+      const errorMsg = err instanceof Error ? err.message : "An error occurred"
+      setSubmitError(errorMsg)
+      console.error("Submission error:", err)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleHexagonClick = (constituency: Constituency) => {
@@ -145,14 +168,21 @@ export function DhakaElectionMap() {
             </div>
 
             <div className="space-y-4">
+              {submitError && (
+                <div className="p-3 rounded-md bg-red-50 border border-red-200">
+                  <p className="text-sm text-red-700">{submitError}</p>
+                </div>
+              )}
+
               <div>
                 <label className="block text-sm font-medium text-gray-700">Candidate Name</label>
                 <input
                   type="text"
                   value={candidateName}
                   onChange={(e) => setCandidateName(e.target.value)}
+                  disabled={isSubmitting}
                   required
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100"
                 />
               </div>
 
@@ -162,8 +192,9 @@ export function DhakaElectionMap() {
                   type="text"
                   value={partyName}
                   onChange={(e) => setPartyName(e.target.value)}
+                  disabled={isSubmitting}
                   required
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100"
                 />
               </div>
 
@@ -172,8 +203,9 @@ export function DhakaElectionMap() {
                 <select
                   value={seatNumber}
                   onChange={(e) => setSeatNumber(Number(e.target.value))}
+                  disabled={isSubmitting}
                   required
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100"
                 >
                   <option value="">Select seat</option>
                   {Array.from({ length: 20 }, (_, i) => i + 1).map((n) => (
@@ -184,11 +216,20 @@ export function DhakaElectionMap() {
             </div>
 
             <div className="mt-6 flex justify-end gap-3">
-              <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 rounded-md bg-gray-100">
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                disabled={isSubmitting}
+                className="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
+              >
                 Cancel
               </button>
-              <button type="submit" className="px-4 py-2 rounded-md bg-orange-600 text-white">
-                Submit
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700 disabled:opacity-50"
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
