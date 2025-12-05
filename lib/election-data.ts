@@ -359,7 +359,7 @@ export const constituencies: Constituency[] = [
         party: "independent",
         votes: 74560,
         percentage: 46.5,
-        photo: "/public/hadi.jpg?height=60&width=60",
+        photo: "/images/hadi.jpg?height=60&width=60",
       },
       {
         id: 24,
@@ -367,7 +367,7 @@ export const constituencies: Constituency[] = [
         party: "bnp",
         votes: 58340,
         percentage: 36.4,
-        photo: "/mirjaabbas.webp?height=60&width=60",
+        photo: "mirjaabbas.webp?height=60&width=60",
       },
       // {
       //   id: 25,

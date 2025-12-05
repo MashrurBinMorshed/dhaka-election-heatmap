@@ -21,11 +21,11 @@ const partyNames = {
 }
 
 const partyLogos = {
-  green: "/green-leaf-party-logo.jpg",
-  bnp: "bnp.png",
-  blue: "/blue-star-party-logo.jpg",
-  orange: "/orange-sun-party-logo.jpg",
-  independent: "/placeholder.svg",
+  green: "/images/green-leaf-party-logo.jpg",
+  bnp: "/images/bnp.png",
+  blue: "/images/blue-star-party-logo.jpg",
+  orange: "/images/orange-sun-party-logo.jpg",
+  independent: "/images/placeholder.svg",
 }
 
 export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanelProps) {
@@ -88,11 +88,24 @@ export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanel
                       <div className="flex items-center gap-4">
                         {/* Candidate Photo */}
                         <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 ring-2 ring-orange-200">
-                          <img
-                            src={candidate.photo || "/placeholder.svg"}
-                            alt={candidate.name}
-                            className="w-full h-full object-cover"
-                          />
+                          {
+                            (() => {
+                              // Normalize photo path: ensure leading slash and strip query params
+                              const raw = candidate.photo || "/images/placeholder.svg"
+                              const path = raw.split("?")[0]
+                              const src = path.startsWith("/") ? path : `/${path}`
+                              return (
+                                <img
+                                  src={src}
+                                  alt={candidate.name}
+                                  onError={(e) => {
+                                    ;(e.currentTarget as HTMLImageElement).src = "/images/placeholder.svg"
+                                  }}
+                                  className="w-full h-full object-cover"
+                                />
+                              )
+                            })()
+                          }
                         </div>
 
                         {/* Candidate Name */}
@@ -109,8 +122,13 @@ export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanel
                         {/* Party Logo */}
                         <div className="w-12 h-12 rounded-lg bg-gray-200 overflow-hidden flex-shrink-0 flex items-center justify-center">
                           <img
-                            src={partyLogos[candidate.party as keyof typeof partyLogos] || "/placeholder.svg"}
+                            src={
+                              (partyLogos[candidate.party as keyof typeof partyLogos] || "/images/placeholder.svg").split("?")[0]
+                            }
                             alt={partyNames[candidate.party as keyof typeof partyNames]}
+                            onError={(e) => {
+                              ;(e.currentTarget as HTMLImageElement).src = "/images/placeholder.svg"
+                            }}
                             className="w-full h-full object-cover"
                           />
                         </div>

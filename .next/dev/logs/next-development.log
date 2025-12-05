@@ -2104,3 +2104,212 @@ It can also happen if the client has a browser extension installed which messes 
 [02:11:53.168] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [02:11:53.168] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [02:11:53.168] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960114163}
+[02:16:24.529] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:16:24.665] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:16:24.665] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:16:24.665] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960385664}
+[02:16:36.075] Server  LOG      ✓ Compiled in 35ms
+[02:17:58.247] Server  LOG      ✓ Compiled in 38ms
+[02:18:05.658] Server  LOG      ✓ Compiled in 37ms
+[02:18:10.529] Server  LOG      ✓ Compiled in 37ms
+[02:18:17.987] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:18.105] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:18:18.105] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:18:18.105] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960499103}
+[02:18:43.999] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:44.116] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:18:44.116] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:18:44.116] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960525115}
+[02:21:45.105] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:21:45.243] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:45.243] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:21:45.243] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960706227}
+[02:22:14.462] Server  LOG      ✓ Compiled in 52ms
+[02:22:18.532] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:22:18.652] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:22:18.652] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:22:18.652] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960739649}
+[02:23:15.496] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:23:15.628] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:23:15.628] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:23:15.628] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960796613}
+[02:23:29.760] Server  LOG      ✓ Compiled in 41ms
+[02:23:33.668] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:23:33.789] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:23:33.789] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:23:33.789] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960814784}
+[02:23:38.152] Server  LOG      ✓ Compiled in 36ms
+[02:23:47.631] Server  LOG      ✓ Compiled in 38ms
+[02:24:09.091] Server  LOG      ✓ Compiled in 41ms
+[02:24:16.502] Server  LOG      ✓ Compiled in 40ms
+[02:24:25.650] Server  LOG      ✓ Compiled in 38ms
+[02:24:27.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:24:27.785] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:24:27.785] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:24:27.785] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960868783}
+[02:24:37.353] Server  LOG      ✓ Compiled in 35ms
+[02:24:47.461] Server  LOG      ✓ Compiled in 38ms
+[02:25:48.843] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:25:48.978] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:25:48.978] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:25:48.978] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960949961}
+[02:25:50.225] Server  LOG      ✓ Compiled in 397ms
+[02:25:50.335] Browser ERROR   ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[02:26:03.394] Server  ERROR    ⨯ ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+[02:26:03.523] Browser ERROR   ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[02:26:04.684] Browser ERROR   ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[02:26:04.947] Browser ERROR   ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[02:26:05.943] Browser ERROR   ./lib/election-data.ts:46:20
+Parsing ecmascript source code failed
+  44 |       //   votes: 85420,
+  45 |       //   percentage: 48.2,
+> 46 |               photo: "/images/placeholder.svg",
+     |                    ^
+  47 |       // },
+  48 |       // {
+  49 |       //   id: 2,
+
+Expected ',', got ':'
+
+Import traces:
+  Client Component Browser:
+    ./lib/election-data.ts [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Client Component Browser]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/election-data.ts [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Client Component SSR]
+    ./components/dhaka-election-map.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[02:26:32.477] Server  LOG      ✓ Compiled in 35ms
+[02:26:34.893] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:26:35.027] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:26:35.027] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:26:35.027] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764960996017}
+[02:27:45.321] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:27:45.432] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:27:45.432] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:27:45.432] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764961066435}
+[02:27:45.582] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:27:45.695] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:27:45.695] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[02:27:45.695] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.0","sv":"0.1.3","ts":1764961066694}
