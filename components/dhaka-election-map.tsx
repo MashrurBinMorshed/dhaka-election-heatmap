@@ -23,7 +23,13 @@ export function DhakaElectionMap() {
   const [seatNumber, setSeatNumber] = useState<number | "">("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState("")
-
+//  heatlevel functionalities
+  const heatLevels = [
+    { name: "Low", color: "bg-orange-100" },
+    { name: "Medium", color: "bg-orange-300" },
+    { name: "High", color: "bg-orange-500" },
+    { name: "Very High", color: "bg-orange-700" },
+  ]
   const openModalFromMenu = () => {
     setIsMenuOpen(false)
     setIsModalOpen(true)
@@ -77,32 +83,30 @@ export function DhakaElectionMap() {
       {/* Left Menu Button */}
       <div className="fixed left-3 top-20 z-50 md:left-12 md:top-32">
         <div className="relative">
-          {/* <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
-            title="Menu"
-          >
-            <MoreVertical size={24} className="text-gray-700" />
-          </button> */}
-<div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-              <button
-                onClick={openModalFromMenu}
-                className="w-full text-left px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors first:rounded-t-lg last:rounded-b-lg"
-              >
-                📝 Submit Candidate Info
-              </button>
-            </div>
-          {/* Dropdown Menu */}
-          {/* {isMenuOpen && (
-            <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-              <button
-                onClick={openModalFromMenu}
-                className="w-full text-left px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors first:rounded-t-lg last:rounded-b-lg"
-              >
-                📝 Submit Candidate Info
-              </button>
-            </div>
-          )} */}
+          <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+            <button
+              onClick={openModalFromMenu}
+              className="w-full text-left px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors first:rounded-t-lg last:rounded-b-lg"
+            >
+              📝 Submit Candidate Info
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Heat Index card under the menu */}
+      <div className="fixed left-3 top-44 z-40 md:left-12 md:top-52">
+        <div className="w-56 bg-white rounded-lg shadow-sm border border-gray-200 p-3 z-40">
+          <p className="text-xs text-gray-500 mb-2">Heat Index</p>
+          <div className="flex items-center gap-1">
+            {heatLevels.map((level, index) => (
+              <div
+                key={level.name}
+                className={`w-6 h-3 ${level.color} ${index === 0 ? "rounded-l" : ""} ${index === heatLevels.length - 1 ? "rounded-r" : ""}`}
+                title={level.name}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
@@ -115,7 +119,20 @@ export function DhakaElectionMap() {
               <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900">Dhaka Election Heat Map 2026</h1>
             </div>
             <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
+              {/* <div className="hidden sm:flex items-center mr-3">
+                <span className="text-xs text-gray-500 mr-2">Heat Index</span>
+                <div className="flex items-center">
+                  {heatLevels.map((level, index) => (
+                    <div
+                      key={level.name}
+                      className={`w-8 h-4 ${level.color} ${index === 0 ? "rounded-l" : ""} ${index === heatLevels.length - 1 ? "rounded-r" : ""}`}
+                      title={level.name}
+                    />
+                  ))}
+                </div>
+              </div> */}
               <Legend />
+              {/* <a href="/terms" className="text-sm text-gray-600 hover:text-orange-600 ml-4">Terms &amp; Conditions</a> */}
             </div>
           </div>
         </header>
