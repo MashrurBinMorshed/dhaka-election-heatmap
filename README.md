@@ -17,6 +17,47 @@ Your project is live at:
 **[https://vercel.com/clashofmbm2000-5163s-projects/v0-dhaka-election-heatmap](https://vercel.com/clashofmbm2000-5163s-projects/v0-dhaka-election-heatmap)**
 
 ## Build your app
+### Local development
+
+Use the development server which runs hot reload and other dev tooling:
+
+```powershell
+npm run dev
+```
+
+### Production build & start
+
+You must build the app before starting the production server. You can either run:
+
+```powershell
+npm run build
+npm start
+```
+
+or use `npm start` directly (it will run `npm run build` automatically before starting):
+
+```powershell
+npm start
+```
+
+Note: `npm start` now runs a prestart build step to simplify starting production locally.
+
+### Running locally while editing
+
+When actively editing the app, run the development server which supports Fast Refresh and will show changes instantly (no rebuild needed):
+
+```powershell
+npm run dev
+```
+
+If you prefer a friendly alias that mirrors `npm start`, use:
+
+```powershell
+npm run start:local
+```
+
+Avoid running `npm start` while editing — `npm start` is intended for production and will not hot-reload your local changes (it runs a one-time build then serves a static server). If you do run `npm start`, you must rebuild (or restart) to see your edits.
+
 
 Continue building your app on:
 

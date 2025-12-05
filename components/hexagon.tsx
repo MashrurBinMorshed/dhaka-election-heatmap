@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -71,7 +72,7 @@ export function Hexagon({ constituency, x, y, size, onClick, isSelected }: Hexag
         textAnchor="middle"
         dominantBaseline="middle"
         fill={heatIndex >= 3 ? "#fff" : "#1f2937"}
-        fontSize="14"
+        fontSize="20"
         fontWeight="bold"
         className="pointer-events-none select-none"
       >
@@ -84,7 +85,7 @@ export function Hexagon({ constituency, x, y, size, onClick, isSelected }: Hexag
         textAnchor="middle"
         dominantBaseline="middle"
         fill={heatIndex >= 3 ? "rgba(255,255,255,0.9)" : "rgba(31,41,55,0.8)"}
-        fontSize="9"
+        fontSize="11"
         className="pointer-events-none select-none"
       >
         {constituency.shortName}
@@ -92,3 +93,4 @@ export function Hexagon({ constituency, x, y, size, onClick, isSelected }: Hexag
     </g>
   )
 }
+

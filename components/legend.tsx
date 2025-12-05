@@ -19,8 +19,8 @@ export function Legend() {
         ))}
       </div>
       <div className="flex items-center gap-4 ml-4 text-xs text-gray-500">
-        <span>Less</span>
-        <span>More</span>
+        
+        
       </div>
     </div>
   )

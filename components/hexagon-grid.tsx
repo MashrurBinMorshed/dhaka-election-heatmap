@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { Hexagon } from "./hexagon"
@@ -10,78 +12,70 @@ interface HexagonGridProps {
 }
 
 export function HexagonGrid({ constituencies, onHexagonClick, selectedId }: HexagonGridProps) {
-  const hexSize = 32
+  // Arrange hexagons in a pattern resembling Dhaka's shape
+  const hexSize = 50
+  const hexWidth = hexSize * 2
+  const hexHeight = Math.sqrt(3) * hexSize
 
-  const hexPositions = [
-    // Top region (North Dhaka)
-    { x: 180, y: 80 }, // Seat 1 - Uttara area
-    { x: 240, y: 70 }, // Seat 2 - Tongi area
-    { x: 300, y: 90 }, // Seat 3 - Northeast
-
-    // Upper-middle region
-    { x: 120, y: 150 }, // Seat 4 - Mirpur north
-    { x: 180, y: 140 }, // Seat 5 - Pallabi
-    { x: 240, y: 135 }, // Seat 6 - Cantonment
-    { x: 320, y: 155 }, // Seat 7 - Badda area
-
-    // Central region (Core Dhaka)
-    { x: 100, y: 220 }, // Seat 8 - Mirpur south
-    { x: 160, y: 210 }, // Seat 9 - Mohammadpur
-    { x: 230, y: 200 }, // Seat 10 - Tejgaon
-    { x: 295, y: 215 }, // Seat 11 - Gulshan
-    { x: 360, y: 230 }, // Seat 12 - Khilkhet
-
-    // Lower-middle region
-    { x: 120, y: 290 }, // Seat 13 - Dhanmondi
-    { x: 185, y: 280 }, // Seat 14 - Ramna
-    { x: 255, y: 280 }, // Seat 15 - Motijheel
-    { x: 330, y: 305 }, // Seat 16 - Rampura
-
-    // South region
-    { x: 175, y: 360 }, // Seat 17 - Old Dhaka west
-    { x: 250, y: 355 }, // Seat 18 - Old Dhaka east
-    { x: 325, y: 380 }, // Seat 19 - Demra
-    { x: 390, y: 430 }, // Seat 20 - Narayanganj border
+  // Grid positions for 20 hexagons arranged in a Dhaka-like pattern
+  const gridPositions = [
+    // Row 1 (top)
+    { row: 0, col: 1 },
+    { row: 0, col: 2 },
+    // Row 2
+    { row: 1, col: 0 },
+    { row: 1, col: 1 },
+    { row: 1, col: 2 },
+    { row: 1, col: 3 },
+    // Row 3
+    { row: 2, col: 0 },
+    { row: 2, col: 1 },
+    { row: 2, col: 2 },
+    { row: 2, col: 3 },
+    // Row 4
+    { row: 3, col: 0 },
+    { row: 3, col: 1 },
+    { row: 3, col: 2 },
+    { row: 3, col: 3 },
+    // Row 5
+    { row: 4, col: 1 },
+    { row: 4, col: 2 },
+    { row: 4, col: 3 },
+    // Row 6 (bottom)
+    { row: 5, col: 1 },
+    { row: 5, col: 2 },
+    { row: 5, col: 3 },
   ]
 
-  const dhakaBoundaryPath = `
-    M 140,30 
-    L 175,22 L 220,18 L 270,22 L 320,35 L 360,60 L 390,95 
-    L 415,135 L 430,180 L 435,230 L 430,280 L 420,325 
-    L 415,370 L 430,420 L 440,470 L 425,510 L 390,535 
-    L 340,545 L 285,530 L 230,505 L 175,480 L 125,450 
-    L 85,410 L 60,365 L 45,315 L 38,260 L 42,200 
-    L 52,150 L 70,105 L 95,65 L 120,42 L 140,30 Z
-  `
+  const getHexPosition = (index: number) => {
+    const pos = gridPositions[index]
+    const xOffset = pos.row % 2 === 0 ? hexWidth * 0.75 : 0
+    const x = pos.col * hexWidth * 1.5 + xOffset
+    const y = pos.row * hexHeight * 0.87
+    return { x, y }
+  }
 
-  const riverPath = `
-    M 38,410 Q 100,400 180,435 Q 260,470 340,455 Q 400,445 440,490
-  `
+  // Calculate grid dimensions
+  const maxCol = Math.max(...gridPositions.map((p) => p.col))
+  const maxRow = Math.max(...gridPositions.map((p) => p.row))
+  const gridWidth = (maxCol + 2) * hexWidth * 1.5
+  const gridHeight = (maxRow + 1) * hexHeight
 
   return (
-    <svg width="520" height="580" viewBox="-10 -10 530 600" className="max-w-full h-auto">
-      <path
-        d={dhakaBoundaryPath}
-        fill="#FDDCBD"
-        fillOpacity="0.9"
-        stroke="#2d2d2d"
-        strokeWidth="3"
-        className="drop-shadow-md"
-      />
-
-      {/* River */}
-      <path d={riverPath} fill="none" stroke="#60A5FA" strokeWidth="10" strokeLinecap="round" opacity="0.8" />
-
-      {/* Hexagons positioned inside Dhaka boundary */}
+    <svg
+      width={gridWidth}
+      height={gridHeight + 40}
+      viewBox={`-10 -10 ${gridWidth + 20} ${gridHeight + 60}`}
+      className="max-w-full h-auto"
+    >
       {constituencies.map((constituency, index) => {
-        if (index >= hexPositions.length) return null
-        const pos = hexPositions[index]
+        const { x, y } = getHexPosition(index)
         return (
           <Hexagon
             key={constituency.id}
             constituency={constituency}
-            x={pos.x}
-            y={pos.y}
+            x={x + hexSize}
+            y={y + hexSize}
             size={hexSize}
             onClick={() => onHexagonClick(constituency)}
             isSelected={selectedId === constituency.id}

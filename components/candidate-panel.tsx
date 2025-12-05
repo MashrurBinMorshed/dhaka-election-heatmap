@@ -1,3 +1,4 @@
+
 "use client"
 
 import { X, MapPin, Users } from "lucide-react"

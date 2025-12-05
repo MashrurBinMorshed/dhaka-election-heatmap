@@ -5,8 +5,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "start:local": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "prestart": "npm run build",
+    "start": "next start",
+    "start:prod": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
