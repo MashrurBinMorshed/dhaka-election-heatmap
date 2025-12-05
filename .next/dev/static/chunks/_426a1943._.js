@@ -737,19 +737,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function Legend() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex items-center gap-1",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-            href: "/terms",
-            className: "text-xs md:text-sm text-gray-600 hover:text-orange-600 ml-2 md:ml-4",
-            children: "Terms & Conditions"
-        }, void 0, false, {
-            fileName: "[project]/components/legend.tsx",
-            lineNumber: 6,
-            columnNumber: 7
-        }, this)
+        className: "flex items-center gap-1"
     }, void 0, false, {
         fileName: "[project]/components/legend.tsx",
-        lineNumber: 5,
+        lineNumber: 3,
         columnNumber: 5
     }, this);
 }
@@ -1690,6 +1681,7 @@ function DhakaElectionMap() {
     const [isPanelOpen, setIsPanelOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isTermsModalOpen, setIsTermsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     // Form state for candidate submission modal
     const [candidateName, setCandidateName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [partyName, setPartyName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -1777,22 +1769,22 @@ function DhakaElectionMap() {
                             children: "📝 Submit Candidate Info"
                         }, void 0, false, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 87,
+                            lineNumber: 88,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 86,
+                        lineNumber: 87,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/dhaka-election-map.tsx",
-                    lineNumber: 85,
+                    lineNumber: 86,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/dhaka-election-map.tsx",
-                lineNumber: 84,
+                lineNumber: 85,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1805,7 +1797,7 @@ function DhakaElectionMap() {
                             children: "Heat Index"
                         }, void 0, false, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 100,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1815,23 +1807,23 @@ function DhakaElectionMap() {
                                     title: level.name
                                 }, level.name, false, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 104,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 101,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/dhaka-election-map.tsx",
-                    lineNumber: 99,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/dhaka-election-map.tsx",
-                lineNumber: 98,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1850,7 +1842,7 @@ function DhakaElectionMap() {
                                             children: "Dhaka Election Dashboard"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1858,36 +1850,47 @@ function DhakaElectionMap() {
                                             children: "Dhaka Election Heat Map 2026"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 120,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 118,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center gap-2 md:gap-4 flex-shrink-0",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$legend$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Legend"], {}, void 0, false, {
-                                        fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 134,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$legend$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Legend"], {}, void 0, false, {
+                                            fileName: "[project]/components/dhaka-election-map.tsx",
+                                            lineNumber: 135,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>setIsTermsModalOpen(true),
+                                            className: "text-xs md:text-sm text-gray-600 hover:text-orange-600 ml-2 md:ml-4",
+                                            children: "Terms & Conditions"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/dhaka-election-map.tsx",
+                                            lineNumber: 136,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 122,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 116,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 115,
+                        lineNumber: 116,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1902,22 +1905,22 @@ function DhakaElectionMap() {
                                     selectedId: selectedConstituency?.id
                                 }, void 0, false, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 146,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                lineNumber: 144,
+                                lineNumber: 145,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 142,
+                            lineNumber: 143,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 141,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1933,7 +1936,7 @@ function DhakaElectionMap() {
                                             children: "20"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 158,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1941,13 +1944,13 @@ function DhakaElectionMap() {
                                             children: "Total Seats"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 159,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1958,7 +1961,7 @@ function DhakaElectionMap() {
                                             children: "Dhaka"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 162,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1966,13 +1969,13 @@ function DhakaElectionMap() {
                                             children: "District"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 163,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1983,7 +1986,7 @@ function DhakaElectionMap() {
                                             children: "2026"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1991,30 +1994,30 @@ function DhakaElectionMap() {
                                             children: "Election Year"
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 167,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/dhaka-election-map.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/dhaka-election-map.tsx",
-                            lineNumber: 155,
+                            lineNumber: 156,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 154,
+                        lineNumber: 155,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/dhaka-election-map.tsx",
-                lineNumber: 114,
+                lineNumber: 115,
                 columnNumber: 7
             }, this),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2025,7 +2028,7 @@ function DhakaElectionMap() {
                         onClick: ()=>setIsModalOpen(false)
                     }, void 0, false, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 175,
+                        lineNumber: 176,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -2041,7 +2044,7 @@ function DhakaElectionMap() {
                                         children: "Submit Candidate Info"
                                     }, void 0, false, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 184,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2051,13 +2054,13 @@ function DhakaElectionMap() {
                                         children: "✕"
                                     }, void 0, false, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 184,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                lineNumber: 182,
+                                lineNumber: 183,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2070,12 +2073,12 @@ function DhakaElectionMap() {
                                             children: submitError
                                         }, void 0, false, {
                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 193,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 192,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2085,7 +2088,7 @@ function DhakaElectionMap() {
                                                 children: "Candidate Name"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 197,
+                                                lineNumber: 198,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2097,13 +2100,13 @@ function DhakaElectionMap() {
                                                 className: "mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 198,
+                                                lineNumber: 199,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 197,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2113,7 +2116,7 @@ function DhakaElectionMap() {
                                                 children: "Party Name"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 209,
+                                                lineNumber: 210,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2125,13 +2128,13 @@ function DhakaElectionMap() {
                                                 className: "mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 211,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 209,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2141,7 +2144,7 @@ function DhakaElectionMap() {
                                                 children: "Election Seat"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 221,
+                                                lineNumber: 222,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2156,7 +2159,7 @@ function DhakaElectionMap() {
                                                         children: "Select seat"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                                        lineNumber: 229,
+                                                        lineNumber: 230,
                                                         columnNumber: 19
                                                     }, this),
                                                     Array.from({
@@ -2166,25 +2169,25 @@ function DhakaElectionMap() {
                                                             children: n
                                                         }, n, false, {
                                                             fileName: "[project]/components/dhaka-election-map.tsx",
-                                                            lineNumber: 231,
+                                                            lineNumber: 232,
                                                             columnNumber: 21
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 223,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 221,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                lineNumber: 189,
+                                lineNumber: 190,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2198,7 +2201,7 @@ function DhakaElectionMap() {
                                         children: "Cancel"
                                     }, void 0, false, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 238,
+                                        lineNumber: 239,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2208,25 +2211,25 @@ function DhakaElectionMap() {
                                         children: isSubmitting ? "Submitting..." : "Submit"
                                     }, void 0, false, {
                                         fileName: "[project]/components/dhaka-election-map.tsx",
-                                        lineNumber: 246,
+                                        lineNumber: 247,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/dhaka-election-map.tsx",
-                                lineNumber: 237,
+                                lineNumber: 238,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/dhaka-election-map.tsx",
-                        lineNumber: 177,
+                        lineNumber: 178,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/dhaka-election-map.tsx",
-                lineNumber: 174,
+                lineNumber: 175,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$candidate$2d$panel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CandidatePanel"], {
@@ -2235,17 +2238,111 @@ function DhakaElectionMap() {
                 onClose: handleClosePanel
             }, void 0, false, {
                 fileName: "[project]/components/dhaka-election-map.tsx",
-                lineNumber: 259,
+                lineNumber: 260,
                 columnNumber: 7
+            }, this),
+            isTermsModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 z-50 flex items-center justify-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-black/40",
+                        onClick: ()=>setIsTermsModalOpen(false)
+                    }, void 0, false, {
+                        fileName: "[project]/components/dhaka-election-map.tsx",
+                        lineNumber: 265,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative bg-white rounded-lg shadow-xl w-full max-w-md mx-4 p-6 z-50 max-h-96 overflow-y-auto",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center justify-between mb-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-lg font-semibold",
+                                        children: "Terms & Conditions"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dhaka-election-map.tsx",
+                                        lineNumber: 269,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>setIsTermsModalOpen(false),
+                                        className: "text-gray-500 text-xl",
+                                        children: "✕"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dhaka-election-map.tsx",
+                                        lineNumber: 270,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/dhaka-election-map.tsx",
+                                lineNumber: 268,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-base font-semibold",
+                                        children: "Hi there!!!"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dhaka-election-map.tsx",
+                                        lineNumber: 276,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-700",
+                                        children: "This platform is created purely for educational and entertainment purposes. The data displayed may be incorrect, unverified, or user-submitted. Do not use this for political involvement, campaigning, or decision-making."
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dhaka-election-map.tsx",
+                                        lineNumber: 277,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/dhaka-election-map.tsx",
+                                lineNumber: 275,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-6 flex justify-end",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setIsTermsModalOpen(false),
+                                    className: "px-4 py-2 rounded-md bg-orange-600 text-white hover:bg-orange-700",
+                                    children: "I Agree"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/dhaka-election-map.tsx",
+                                    lineNumber: 285,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/dhaka-election-map.tsx",
+                                lineNumber: 284,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/dhaka-election-map.tsx",
+                        lineNumber: 267,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/dhaka-election-map.tsx",
+                lineNumber: 264,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/dhaka-election-map.tsx",
-        lineNumber: 82,
+        lineNumber: 83,
         columnNumber: 5
     }, this);
 }
-_s(DhakaElectionMap, "no+EcXDSk5XE2byAQv9OgCJ7C4M=");
+_s(DhakaElectionMap, "BA/Aol91VlafpU+zjzCzVAwBgcM=");
 _c = DhakaElectionMap;
 var _c;
 __turbopack_context__.k.register(_c, "DhakaElectionMap");
