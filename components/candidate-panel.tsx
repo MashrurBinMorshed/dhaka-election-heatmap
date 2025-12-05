@@ -14,7 +14,7 @@ interface CandidatePanelProps {
 
 const partyNames = {
   green: "Green Party",
-  red: "Red Party",
+  bnp: "Bangladesh Nationalist Party",
   blue: "Blue Party",
   orange: "Orange Party",
   independent: "Independent",
@@ -22,10 +22,10 @@ const partyNames = {
 
 const partyLogos = {
   green: "/green-leaf-party-logo.jpg",
-  red: "/red-rose-party-logo.jpg",
+  bnp: "bnp.png",
   blue: "/blue-star-party-logo.jpg",
   orange: "/orange-sun-party-logo.jpg",
-  independent: "/neutral-independent-candidate-logo.jpg",
+  independent: "/placeholder.svg",
 }
 
 export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanelProps) {
