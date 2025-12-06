@@ -347,7 +347,7 @@ export const constituencies: Constituency[] = [
     winner: {
       id: 23,
       name: "Osman Hadi",
-      party: "red",
+      party: "hadi",
       votes: 74560,
       percentage: 46.5,
       photo: "/placeholder.svg?height=80&width=80",
@@ -356,10 +356,10 @@ export const constituencies: Constituency[] = [
       {
         id: 23,
         name: "Osman Hadi",
-        party: "independent",
+        party: "hadi",
         votes: 74560,
         percentage: 46.5,
-        photo: "/images/hadi.jpg?height=60&width=60",
+        photo: "https://lgrvoxzy0y.ufs.sh/f/veVXtx6LlCAR0YsbzVLLZV1zRk3TDEbdog8Cel5wO6rNBA4t",
       },
       {
         id: 24,

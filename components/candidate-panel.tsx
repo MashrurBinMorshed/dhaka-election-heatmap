@@ -18,14 +18,16 @@ const partyNames = {
   blue: "Blue Party",
   orange: "Orange Party",
   independent: "Independent",
+  hadi: "Independent (Osman Hadi)",
 }
 
 const partyLogos = {
   green: "/images/green-leaf-party-logo.jpg",
-  bnp: "/images/bnp.png",
+  bnp: "https://lgrvoxzy0y.ufs.sh/f/veVXtx6LlCARyzLFa41kAo8hmbW7uM6ZNc1GnDROYqfx9wpj",
   blue: "/images/blue-star-party-logo.jpg",
   orange: "/images/orange-sun-party-logo.jpg",
   independent: "/images/placeholder.svg",
+  hadi: "https://lgrvoxzy0y.ufs.sh/f/veVXtx6LlCARdZjTZdtboPutpq8jT4FWRSANKG7iOfyvEld2",
 }
 
 export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanelProps) {
