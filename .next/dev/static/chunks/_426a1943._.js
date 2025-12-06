@@ -583,25 +583,15 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-16 h-16 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 ring-2 ring-orange-200",
-                                                                children: (()=>{
-                                                                    // Normalize photo path: ensure leading slash and strip query params
-                                                                    const raw = candidate.photo || "/images/placeholder.svg";
-                                                                    const path = raw.split("?")[0];
-                                                                    const src = path.startsWith("/") ? path : `/${path}`;
-                                                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                        src: src,
-                                                                        alt: candidate.name,
-                                                                        onError: (e)=>{
-                                                                            ;
-                                                                            e.currentTarget.src = "/images/placeholder.svg";
-                                                                        },
-                                                                        className: "w-full h-full object-cover"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/candidate-panel.tsx",
-                                                                        lineNumber: 100,
-                                                                        columnNumber: 33
-                                                                    }, this);
-                                                                })()
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                    src: candidate.photo || "/placeholder.svg" || "https://lgrvoxzy0y.ufs.sh/f",
+                                                                    alt: candidate.name,
+                                                                    className: "w-full h-full object-cover"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/candidate-panel.tsx",
+                                                                    lineNumber: 112,
+                                                                    columnNumber: 27
+                                                                }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/candidate-panel.tsx",
                                                                 lineNumber: 92,
@@ -615,7 +605,7 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                                         children: candidate.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                                        lineNumber: 115,
+                                                                        lineNumber: 121,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -623,13 +613,13 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                                         children: "Candidate"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                                        lineNumber: 116,
+                                                                        lineNumber: 122,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/candidate-panel.tsx",
-                                                                lineNumber: 114,
+                                                                lineNumber: 120,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
@@ -642,7 +632,7 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                         className: "my-4 bg-gray-200"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                        lineNumber: 120,
+                                                        lineNumber: 126,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -660,12 +650,12 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                                     className: "w-full h-full object-cover"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/candidate-panel.tsx",
-                                                                    lineNumber: 126,
+                                                                    lineNumber: 132,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/candidate-panel.tsx",
-                                                                lineNumber: 125,
+                                                                lineNumber: 131,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,7 +666,7 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                                         children: "Party"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                                        lineNumber: 140,
+                                                                        lineNumber: 146,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -684,19 +674,19 @@ function CandidatePanel({ constituency, isOpen, onClose }) {
                                                                         children: partyNames[candidate.party]
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                                        lineNumber: 141,
+                                                                        lineNumber: 147,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/candidate-panel.tsx",
-                                                                lineNumber: 139,
+                                                                lineNumber: 145,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/candidate-panel.tsx",
-                                                        lineNumber: 123,
+                                                        lineNumber: 129,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
@@ -937,7 +927,7 @@ const constituencies = [
                 party: "bnp",
                 votes: 58340,
                 percentage: 36.4,
-                photo: "mirjaabbas.webp?height=60&width=60"
+                photo: "https://lgrvoxzy0y.ufs.sh/f/veVXtx6LlCARG3n5eqch7aCATNL0blRwXm6ypSBPkQVjUxzE"
             }
         ],
         totalVoters: 218000,

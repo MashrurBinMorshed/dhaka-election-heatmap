@@ -367,7 +367,7 @@ export const constituencies: Constituency[] = [
         party: "bnp",
         votes: 58340,
         percentage: 36.4,
-        photo: "mirjaabbas.webp?height=60&width=60",
+        photo: "https://lgrvoxzy0y.ufs.sh/f/veVXtx6LlCARG3n5eqch7aCATNL0blRwXm6ypSBPkQVjUxzE",
       },
       // {
       //   id: 25,

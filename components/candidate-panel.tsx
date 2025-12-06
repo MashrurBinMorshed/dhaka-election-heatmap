@@ -90,10 +90,10 @@ export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanel
                       <div className="flex items-center gap-4">
                         {/* Candidate Photo */}
                         <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 ring-2 ring-orange-200">
-                          {
+                          {/* {
                             (() => {
                               // Normalize photo path: ensure leading slash and strip query params
-                              const raw = candidate.photo || "/images/placeholder.svg"
+                              const raw = candidate.photo || "/images/placeholder.svg" || "https://lgrvoxzy0y.ufs.sh/f"
                               const path = raw.split("?")[0]
                               const src = path.startsWith("/") ? path : `/${path}`
                               return (
@@ -107,7 +107,13 @@ export function CandidatePanel({ constituency, isOpen, onClose }: CandidatePanel
                                 />
                               )
                             })()
-                          }
+                          } */}
+
+                          <img
+                            src={candidate.photo || "/placeholder.svg" || "https://lgrvoxzy0y.ufs.sh/f"}
+                            alt={candidate.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
 
                         {/* Candidate Name */}
