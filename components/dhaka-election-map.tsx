@@ -22,9 +22,10 @@ export function DhakaElectionMap() {
   const [candidateName, setCandidateName] = useState("")
   const [partyName, setPartyName] = useState("")
   const [seatNumber, setSeatNumber] = useState<number | "">("")
+  const [candidateFile, setCandidateFile] = useState<File | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState("")
-//  heatlevel functionalities
+  //  heatlevel functionalities
   const heatLevels = [
     { name: "Low", color: "bg-orange-100" },
     { name: "Medium", color: "bg-orange-300" },
@@ -42,10 +43,17 @@ export function DhakaElectionMap() {
     setSubmitError("")
 
     try {
+      const formData = new FormData()
+      formData.append("candidateName", candidateName)
+      formData.append("partyName", partyName)
+      formData.append("seatNumber", String(seatNumber))
+      if (candidateFile) {
+        formData.append("file", candidateFile)
+      }
+
       const response = await fetch("/api/submit-candidate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ candidateName, partyName, seatNumber }),
+        body: formData,
       })
 
       if (!response.ok) {
@@ -57,6 +65,7 @@ export function DhakaElectionMap() {
       setCandidateName("")
       setPartyName("")
       setSeatNumber("")
+      setCandidateFile(null)
       toast.success("Candidate submitted successfully!", {
         description: `${candidateName} from ${partyName} - Seat ${seatNumber}`,
       })
@@ -120,7 +129,7 @@ export function DhakaElectionMap() {
               <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900">Dhaka Election Heat Map 2026</h1>
             </div>
             <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-              
+
               <Legend />
               <button onClick={() => setIsTermsModalOpen(true)} className="text-xs md:text-sm text-gray-600 hover:text-orange-600 ml-2 md:ml-4">Terms &amp; Conditions</button>
             </div>
@@ -187,6 +196,7 @@ export function DhakaElectionMap() {
                 <label className="block text-sm font-medium text-gray-700">Candidate Name</label>
                 <input
                   type="text"
+                  placeholder="Enter Candidate Name"
                   value={candidateName}
                   onChange={(e) => setCandidateName(e.target.value)}
                   disabled={isSubmitting}
@@ -199,6 +209,7 @@ export function DhakaElectionMap() {
                 <label className="block text-sm font-medium text-gray-700">Party Name</label>
                 <input
                   type="text"
+                  placeholder="Enter Party Name"
                   value={partyName}
                   onChange={(e) => setPartyName(e.target.value)}
                   disabled={isSubmitting}
@@ -221,6 +232,63 @@ export function DhakaElectionMap() {
                     <option key={n} value={n}>{n}</option>
                   ))}
                 </select>
+              </div>
+
+              <div>
+                <span className="block text-sm font-medium text-gray-700 mb-1">Upload Candidate Image</span>
+                <label
+                  htmlFor="file-upload"
+                  className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md hover:border-orange-400 transition-colors cursor-pointer"
+                >
+                  <div className="space-y-1 text-center">
+                    <svg
+                      className="mx-auto h-12 w-12 text-gray-400"
+                      stroke="currentColor"
+                      fill="none"
+                      viewBox="0 0 48 48"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <div className="flex text-sm text-gray-600">
+                      <span className="font-medium text-orange-600">Upload a file</span>
+                      <p className="pl-1">or drag and drop</p>
+                    </div>
+                    <p className="text-xs text-gray-500">JPG, PNG, JPEG up to 10MB</p>
+                    {candidateFile && (
+                      <p className="text-sm text-orange-600 font-medium mt-2">
+                        ✓ {candidateFile.name}
+                      </p>
+                    )}
+                  </div>
+                </label>
+                <input
+                  id="file-upload"
+                  name="file-upload"
+                  type="file"
+                  className="sr-only"
+                  disabled={isSubmitting}
+                  onChange={(e) => {
+                    const file = e.target.files?.[0] || null
+                    if (file) {
+                      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png']
+                      if (!allowedTypes.includes(file.type)) {
+                        setSubmitError('Only JPG, JPEG, and PNG files are allowed.')
+                        setCandidateFile(null)
+                        e.target.value = ''
+                        return
+                      }
+                      setSubmitError('')
+                    }
+                    setCandidateFile(file)
+                  }}
+                  accept=".jpg,.jpeg,.png"
+                />
               </div>
             </div>
 

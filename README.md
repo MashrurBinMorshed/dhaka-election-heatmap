@@ -1,71 +1,107 @@
-# Dhaka election heatmap
+# Dhaka Election Heat Map 2026
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A modern, interactive heatmap dashboard visualizing election data for Dhaka constituencies. Built with Next.js, React, Tailwind CSS, and Supabase.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/clashofmbm2000-5163s-projects/v0-dhaka-election-heatmap)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/sPAUvDQDEml)
 
-## Overview
+## 🌟 Features
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- **Interactive Hexagon Map**: A visually engaging SVG-based hexagon grid representing 20 Dhaka constituencies.
+- **Dynamic Heat Levels**: Color-coded visualization indicating "heat" or intensity levels for each seat (Low to Very High).
+- **Candidate Details Panel**: Click on any constituency to reveal detailed candidate information, party affiliations, and election stats.
+- **Public Submission System**: 
+  - Allows users to submit candidate information for specific seats.
+  - **File Upload**: Securely upload candidate images/documents via Supabase Storage.
+  - Real-time form validation and error handling.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices with touch-friendly interactions.
 
-## Deployment
+## 🛠 Tech Stack
 
-Your project is live at:
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Lucide Icons
+- **Backend**: Next.js API Routes
+- **Database**: [Supabase](https://supabase.com/) (PostgreSQL)
+- **Storage**: Supabase Storage
+- **UI Components**: Radix UI primitives, Sonner (Toasts)
 
-**[https://vercel.com/clashofmbm2000-5163s-projects/v0-dhaka-election-heatmap](https://vercel.com/clashofmbm2000-5163s-projects/v0-dhaka-election-heatmap)**
+## 🚀 Getting Started
 
-## Build your app
-### Local development
+### Prerequisites
 
-Use the development server which runs hot reload and other dev tooling:
+- Node.js 18+ installed
+- A Supabase account and project
 
-```powershell
-npm run dev
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MashrurBinMorshed/dhaka-election-heatmap.git
+   cd dhaka-election-heatmap
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+3. **Environment Setup**
+   Create a `.env` file in the root directory:
+   ```env
+   SUPABASE_URL=your_supabase_project_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Supabase Setup**
+   
+   - **Database**: Run the SQL migration to create the table:
+     ```sql
+     -- Create table for submissions
+     create table public.candidate_submissions (
+       id uuid not null default gen_random_uuid (),
+       candidate_name text not null,
+       party_name text not null,
+       seat_number integer not null,
+       file_url text null,
+       created_at timestamp with time zone null default now(),
+       constraint candidate_submissions_pkey primary key (id)
+     ) TABLESPACE pg_default;
+     ```
+
+   - **Storage**: 
+     1. Create a public bucket named `candidate-files`.
+     2. Add an RLS policy to allow public INSERTs:
+        ```sql
+        CREATE POLICY "Allow public uploads" ON storage.objects
+        FOR INSERT WITH CHECK (bucket_id = 'candidate-files');
+        ```
+
+5. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📂 Project Structure
+
+```
+├── app/                  # Next.js App Router pages and API
+│   ├── api/              # Backend API routes
+│   └── page.tsx          # Main entry point
+├── components/           # React components
+│   ├── dhaka-election-map.tsx  # Main dashboard container
+│   ├── hexagon-grid.tsx        # D3/SVG logic for grid layout
+│   ├── hexagon.tsx             # Individual hex component
+│   └── candidate-panel.tsx     # Slide-out details panel
+├── lib/                  # Utilities and static data
+│   └── election-data.ts  # Constituency data model
+└── supabase/             # Migration files
 ```
 
-### Production build & start
+## 🤝 Contributing
 
-You must build the app before starting the production server. You can either run:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-```powershell
-npm run build
-npm start
-```
+## 📄 License
 
-or use `npm start` directly (it will run `npm run build` automatically before starting):
-
-```powershell
-npm start
-```
-
-Note: `npm start` now runs a prestart build step to simplify starting production locally.
-
-### Running locally while editing
-
-When actively editing the app, run the development server which supports Fast Refresh and will show changes instantly (no rebuild needed):
-
-```powershell
-npm run dev
-```
-
-If you prefer a friendly alias that mirrors `npm start`, use:
-
-```powershell
-npm run start:local
-```
-
-Avoid running `npm start` while editing — `npm start` is intended for production and will not hot-reload your local changes (it runs a one-time build then serves a static server). If you do run `npm start`, you must rebuild (or restart) to see your edits.
-
-
-Continue building your app on:
-
-**[https://v0.app/chat/sPAUvDQDEml](https://v0.app/chat/sPAUvDQDEml)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+This project is open-source and available under the [MIT License](LICENSE).

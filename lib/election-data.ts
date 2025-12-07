@@ -910,5 +910,5 @@ export const constituencies: Constituency[] = [
     turnout: 75.9,
     margin: 6750,
   },
-  
+
 ]
